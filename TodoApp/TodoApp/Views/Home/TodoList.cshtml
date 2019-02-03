@@ -1,4 +1,6 @@
-﻿
+﻿@model List<string>
+    @*a modell megtartja a tipussagot*@
+
 @{
     ViewBag.Title = "TodoList";
 }
@@ -6,8 +8,8 @@
 <h2>bolti lista</h2>
 
 <ol>
-    @foreach (var elem in ViewBag.Lista)
+    @foreach (var elem in Model)
     {
-    <li>@elem</li>
-    }    
+        <li>@elem</li>
+    }
 </ol>

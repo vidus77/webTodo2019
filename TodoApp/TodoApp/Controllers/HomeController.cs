@@ -37,8 +37,7 @@ namespace TodoApp.Controllers
             lista.Add("Marhahús");
             lista.Add("Paradicsom");
 
-            ViewBag.Lista = (lista);
-           return View();
+           return View(lista);
         }
 
     }
