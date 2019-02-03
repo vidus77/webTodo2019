@@ -1,4 +1,4 @@
-﻿@model List<string>
+﻿@model List<TodoApp.Models.TodoItem>
     @*a modell megtartja a tipussagot*@
 
 @{
@@ -8,8 +8,17 @@
 <h2>bolti lista</h2>
 
 <ol>
-    @foreach (var elem in Model)
+    @foreach (var todoItem in Model)
     {
-        <li>@elem</li>
+        if (todoItem.Done)
+        {
+            <li><strike>@todoItem.Name</strike></li>
+        }
+        else
+        {
+            <li>@todoItem.Name</li>
+        }
     }
+    
+
 </ol>
