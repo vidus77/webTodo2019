@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "TodoList";
+}
+
+<h2>bolti lista</h2>
+
+<ol>
+    @foreach (var elem in ViewBag.Lista)
+    {
+    <li>@elem</li>
+    }    
+</ol>
